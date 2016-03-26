@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Xel">
+      <UniqueIdentifier>{32cd9cf2-2108-4821-8c57-04d7984cf368}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WinOs">
+      <UniqueIdentifier>{7550b7cc-da10-4512-b9f0-c296008a8251}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Callback.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Xel\Xel.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+    <ClInclude Include="Xel\Xel_Common.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+    <ClInclude Include="Xel\Xel_Keyboard.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+    <ClInclude Include="Xel\Xel_Keyboard_Def.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+    <ClInclude Include="Xel\Xel_Mouse.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+    <ClInclude Include="Xel\Xel_Window.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+    <ClInclude Include="Xel\Xel_WndProc.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+    <ClInclude Include="WinOs\WinOs.h">
+      <Filter>WinOs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Callbacks.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Xel\Xel.cpp">
+      <Filter>Xel</Filter>
+    </ClCompile>
+    <ClCompile Include="Xel\Xel_Keyboard.cpp">
+      <Filter>Xel</Filter>
+    </ClCompile>
+    <ClCompile Include="Xel\Xel_Mouse.cpp">
+      <Filter>Xel</Filter>
+    </ClCompile>
+    <ClCompile Include="Xel\Xel_Window.cpp">
+      <Filter>Xel</Filter>
+    </ClCompile>
+    <ClCompile Include="Xel\Xel_WndProc.cpp">
+      <Filter>Xel</Filter>
+    </ClCompile>
+    <ClCompile Include="WinOs\WinOs_GL.cpp">
+      <Filter>WinOs</Filter>
+    </ClCompile>
+    <ClCompile Include="WinOs\WinOs_Window.cpp">
+      <Filter>WinOs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Solution.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Solution.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
