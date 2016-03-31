@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Xel">
+      <UniqueIdentifier>{1abee441-dd61-428b-803f-8a289fd0240d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WinOs">
+      <UniqueIdentifier>{6cf6c779-52ee-4885-a31d-70229a6f3156}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Solution\Solution\WinOs\WinOs.h">
+      <Filter>WinOs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Solution\Solution\Xel\Xel.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Solution\Solution\Xel\Xel_Common.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Solution\Solution\Xel\Xel_Keyboard.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Solution\Solution\Xel\Xel_Keyboard_Def.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Solution\Solution\Xel\Xel_Mouse.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Solution\Solution\Xel\Xel_Window.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Solution\Solution\Xel\Xel_WndProc.h">
+      <Filter>Xel</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Solution\Solution\WinOs\WinOs_GL.cpp">
+      <Filter>WinOs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Solution\Solution\WinOs\WinOs_Window.cpp">
+      <Filter>WinOs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Solution\Solution\Xel\Xel.cpp">
+      <Filter>Xel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Solution\Solution\Xel\Xel_Keyboard.cpp">
+      <Filter>Xel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Solution\Solution\Xel\Xel_Mouse.cpp">
+      <Filter>Xel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Solution\Solution\Xel\Xel_Window.cpp">
+      <Filter>Xel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Solution\Solution\Xel\Xel_WndProc.cpp">
+      <Filter>Xel</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
