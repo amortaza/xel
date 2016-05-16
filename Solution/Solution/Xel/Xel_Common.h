@@ -8,6 +8,6 @@ namespace Xel {
 
     void Loop(void(*TickCallback)());
 
-	void Close();
+	void Quit();
 }
 

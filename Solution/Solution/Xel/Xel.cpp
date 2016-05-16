@@ -15,7 +15,7 @@ namespace Xel {
 		WinOs::Window::SwapBuffers();
 	}
 
-    void Close() {
+    void Quit() {
         WinOs::Window::Close();
     }
 

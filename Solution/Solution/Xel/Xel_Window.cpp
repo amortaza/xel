@@ -26,7 +26,7 @@ namespace Xel {
 
             else {                
 				printf("Must call Xel::Window::SetCallbacks BEFORE calling SetSize.  Its just good manners :)\n");
-                Xel::Close();
+                Xel::Quit();
             }
         }
 

@@ -10,7 +10,7 @@ void OnMouseScroll(int amount) {
 }
 
 void OnKeyDown(unsigned long long xcode) {
-	Xel::Close();
+	Xel::Quit();
 }
 
 void OnKeyUp(unsigned long long xcode) {
