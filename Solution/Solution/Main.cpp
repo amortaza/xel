@@ -10,30 +10,30 @@ void Uninit() {
 
 void OnTick() {
 
-    Xel::Swap();
+    xel::swap();
 }
 
 int main(int argc, char** argv) {
     _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
-    Xel::Init();
+    xel::init();
 
-    Xel::Window::SetCallbacks(OnResize, Init, Uninit);
+    xel::window::setCallbacks(OnResize, Init, Uninit);
 
-    Xel::Mouse::SetCallbacks(
+    xel::mouse::setCallbacks(
         OnMouseMove,
         OnMouseButton,
         OnMouseScroll);
 
-    Xel::Keyboard::SetCallbacks(
+    xel::keyboard::setCallbacks(
         OnKeyDown,
         OnKeyUp);
 
-    Xel::Window::SetTitle("Xel v2016.03.26");
-    Xel::Window::SetPosition(200, 100);
-    Xel::Window::SetSize(1280, 800);
+    xel::window::setTitle("Xel v2016.03.26");
+    xel::window::setPosition(200, 100);
+    xel::window::setSize(1280, 800);
 
-    Xel::Loop(OnTick);
+    xel::loop(OnTick);
 
 	//int i;std::cin >> i;
 

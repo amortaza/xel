@@ -1,19 +1,19 @@
 #pragma once
 
-namespace Xel {
+namespace xel {
 
-    namespace Keyboard {
+    namespace keyboard {
 
-        namespace Internal {
-            extern void (*g_OnDown)(unsigned long long xcode);
-            extern void (*g_OnUp)(unsigned long long xcode);
+        namespace _ {
+            extern void (*g_onDown)(unsigned long long xcode);
+            extern void (*g_onUp)(unsigned long long xcode);
 
-            unsigned long long VirtualCodeToXCode(unsigned long long vcode);
+            unsigned long long virtualCodeToXCode(unsigned long long vcode);
         }
 
-        void SetCallbacks(  void (*OnDown)(unsigned long long xcode),
+        void setCallbacks(  void (*OnDown)(unsigned long long xcode),
                             void (*OnUp)(unsigned long long xcode));
 
-        char* XCodeToString(unsigned long long xcode);
+        char* xCodeToString(unsigned long long xcode);
     }
 }

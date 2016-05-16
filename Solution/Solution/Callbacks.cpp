@@ -3,14 +3,14 @@
 void OnMouseMove(int x, int y) {
 }
 
-void OnMouseButton(Xel::Mouse::Button button, Xel::Mouse::Action action, int x, int y) {
+void OnMouseButton(xel::mouse::Button button, xel::mouse::Action action, int x, int y) {
 }
 
 void OnMouseScroll(int amount) {
 }
 
 void OnKeyDown(unsigned long long xcode) {
-	Xel::Quit();
+	xel::quit();
 }
 
 void OnKeyUp(unsigned long long xcode) {

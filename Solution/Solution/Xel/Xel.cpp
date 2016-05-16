@@ -5,21 +5,21 @@
 #include "Xel/Xel_WndProc.h"
 #include "Xel/Xel_Window.h"
 
-namespace Xel {
+namespace xel {
 
-    void Init() {
-        WinOs::Window::CreateMainWindow(_WndProc);
+    void init() {
+        win32::window::createMainWindow(_WndProc);
     }
 
-	void Swap() {
-		WinOs::Window::SwapBuffers();
+	void swap() {
+		win32::window::swapBuffers();
 	}
 
-    void Quit() {
-        WinOs::Window::Close();
+    void quit() {
+        win32::window::close();
     }
 
-    void Loop(void (*TickCallback)() ) {
+    void loop(void (*tickCallback)() ) {
         MSG msg;
 
         while (true) {
@@ -32,8 +32,8 @@ namespace Xel {
             }
 
             // Resize must have been called once
-            if (Window::Internal::g_ResizeCount > 0) 
-				TickCallback();
+            if (window::_::g_resizeCount > 0) 
+				tickCallback();
         }
     }
 }

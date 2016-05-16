@@ -2,15 +2,14 @@
 
 #include "Xel/Xel_Keyboard_Def.h"
 
-namespace Xel {
+namespace xel {
+    namespace keyboard {
+        namespace _ {
 
-    namespace Keyboard {
+            void (*g_onDown)(unsigned long long xcode);
+            void (*g_onUp)(unsigned long long xcode);
 
-        namespace Internal {
-            void (*g_OnDown)(unsigned long long xcode);
-            void (*g_OnUp)(unsigned long long xcode);
-
-            unsigned long long VirtualCodeToXCode(unsigned long long vcode) {
+            unsigned long long virtualCodeToXCode(unsigned long long vcode) {
 
                 if (vcode == VK_BACK)
                     return Xel_Key_Back;
@@ -307,14 +306,14 @@ namespace Xel {
         // Alt keys are not handled
         // PrintScreen only fires UP event
         // F10 not handled
-        void SetCallbacks(  void (*OnDown)(unsigned long long xcode),
+        void setCallbacks(  void (*OnDown)(unsigned long long xcode),
                             void (*OnUp)(unsigned long long xcode) ) {
 
-            Internal::g_OnDown  = OnDown;
-            Internal::g_OnUp    = OnUp;
+            _::g_onDown  = OnDown;
+            _::g_onUp    = OnUp;
         }
 
-        char * XCodeToString(unsigned long long xcode) {
+        char * xCodeToString(unsigned long long xcode) {
 
             if (xcode == Xel_Key_Back)
                 return "Xel_Key_Back";

@@ -3,33 +3,24 @@
 #include "Xel/Xel_Mouse.h"
 #include "WinOs/WinOs.h"
 
-namespace Xel {
+namespace xel {
+    namespace mouse {
+        namespace _ {
 
-    namespace Mouse {
+            void (*g_onMove)(int x, int y);
 
-        namespace Internal {
-            void (*g_OnMove)(int x, int y);
+            void (*g_onButton)(Button button, Action action, int x, int y);
 
-            void (*g_OnButton)(Button button, Action action, int x, int y);
-
-            void (*g_OnScroll)(int amount);
+            void (*g_onScroll)(int amount);
         }
 
-        void SetCallbacks(  void (*OnMove)(int x, int y),
+        void setCallbacks(  void (*OnMove)(int x, int y),
                             void (*OnButton)(Button button, Action action, int x, int y),
                             void (*OnScroll)(int amount) ) {
 
-            Internal::g_OnMove      = OnMove;
-            Internal::g_OnButton    = OnButton;
-            Internal::g_OnScroll    = OnScroll;
-        }
-
-        void Capture() {
-            SetCapture( WinOs::Window::g_hwnd);
-        }
-
-        void Release() {
-            ReleaseCapture();
+            _::g_onMove      = OnMove;
+            _::g_onButton    = OnButton;
+            _::g_onScroll    = OnScroll;
         }
     }
 }

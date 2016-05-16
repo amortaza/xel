@@ -1,39 +1,39 @@
 #pragma once
 
-namespace WinOs {
+namespace win32 {
 
-    namespace Internal {
+    namespace _ {
 
-        void RegisterWindowClass(WNDPROC wndProc);
+        void registerWindowClass(WNDPROC wndProc);
 
-        HWND CreateMainWindowEx();
+        HWND createMainWindowEx();
     }
 
-    namespace Window {
+    namespace window {
         extern HWND g_hwnd;
 
-        void CreateMainWindow(WNDPROC wndProc);
+        void createMainWindow(WNDPROC wndProc);
 
-        void SwapBuffers();
+        void swapBuffers();
 
-        void SetPosition(int left, int top);
+        void setPosition(int left, int top);
 
-        void SetSize(int width, int height);
+        void setSize(int width, int height);
 
-        void SetTitle(char* title);
+        void setTitle(char* title);
 
-        void Close();
+        void close();
     }
 }
 
-namespace WinOs {
+namespace win32 {
 
-    namespace GL {
+    namespace gl {
 
         extern HGLRC g_glrc;
         extern HDC   g_hdc;
 
-        void Create(HWND hwnd);
-        void Delete(HWND hwnd);
+        void createGLContext(HWND hwnd);
+        void deleteGLContext(HWND hwnd);
     }
 }

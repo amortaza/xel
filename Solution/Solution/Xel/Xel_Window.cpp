@@ -3,44 +3,44 @@
 #include "WinOs/WinOs.h"
 #include "Xel/Xel.h"
 
-namespace Xel {
+namespace xel {
 
-    namespace Window {
+    namespace window {
 
         int width, height;
 
-        namespace Internal {
-            unsigned int g_ResizeCount = 0;
+        namespace _ {
+            unsigned int g_resizeCount = 0;
 
-            void (*g_OnResize)(int w, int h) = 0;
-            void (*g_OnBeforeGLDeleted)() = 0;
+            void (*g_onResize)(int w, int h) = 0;
+            void (*g_onBeforeGLDeleted)() = 0;
         }
 
-        void SetPosition(int x, int y) {
-            WinOs::Window::SetPosition(x, y);
+        void setPosition(int x, int y) {
+            win32::window::setPosition(x, y);
         }
 
-        void SetSize(int w, int h) {
-            if (Internal::g_OnResize != 0)
-                WinOs::Window::SetSize(w, h);
+        void setSize(int w, int h) {
+            if (_::g_onResize != 0)
+                win32::window::setSize(w, h);
 
             else {                
-				printf("Must call Xel::Window::SetCallbacks BEFORE calling SetSize.  Its just good manners :)\n");
-                Xel::Quit();
+				printf("Must call xel::window::SetCallbacks BEFORE calling SetSize.  Its just good manners :)\n");
+                xel::quit();
             }
         }
 
-        void SetTitle(char *title) {
-            WinOs::Window::SetTitle(title);
+        void setTitle(char *title) {
+            win32::window::setTitle(title);
         }
 
-        void SetCallbacks(
+        void setCallbacks(
                 void (*OnResize)(int w, int h),
                 void (*OnAfterGLCreated)(),
                 void (*OnBeforeGLDeleted)() ) {
 
-            Internal::g_OnResize = OnResize;
-            Internal::g_OnBeforeGLDeleted = OnBeforeGLDeleted;
+            _::g_onResize = OnResize;
+            _::g_onBeforeGLDeleted = OnBeforeGLDeleted;
 
             OnAfterGLCreated();
         }

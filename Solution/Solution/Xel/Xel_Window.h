@@ -1,27 +1,26 @@
 #pragma once
 
-namespace Xel {
-
-    namespace Window {
+namespace xel {
+    namespace window {
 
         extern int width, height;
 
-        void SetPosition(int x, int y);
+        void setPosition(int x, int y);
 
-        void SetSize(int w, int h);
+        void setSize(int w, int h);
 
-        void SetTitle(char *title);
+        void setTitle(char *title);
 
-        void SetCallbacks(
+        void setCallbacks(
                 void (*OnResize)(int w, int h),
                 void (*OnAfterGLCreated)(),
                 void(*OnBeforeGLDeleted)()
         );
 
-        namespace Internal {
-            extern unsigned int g_ResizeCount;
-            extern void (*g_OnResize)(int w, int h);
-            extern void(*g_OnBeforeGLDeleted)();
+        namespace _ {
+            extern unsigned int g_resizeCount;
+            extern void (*g_onResize)(int w, int h);
+            extern void(*g_onBeforeGLDeleted)();
         }
     }
 }

@@ -1,5 +1,5 @@
 #pragma once
 
-namespace Xel {
+namespace xel {
     LRESULT CALLBACK _WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
 }

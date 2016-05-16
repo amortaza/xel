@@ -1,7 +1,8 @@
 #pragma once
 
-namespace Xel {
-    namespace Mouse {
+namespace xel {
+    namespace mouse {
+
         enum Button {
             Left, Right, Middle, X1, X2
         };
@@ -10,17 +11,14 @@ namespace Xel {
             Down, Up
         };
 
-        namespace Internal {
-            extern void (*g_OnMove)(int x, int y);
-            extern void (*g_OnButton)(Button button, Action action, int x, int y);
-            extern void (*g_OnScroll)(int amount);
+        namespace _ {
+            extern void (*g_onMove)(int x, int y);
+            extern void (*g_onButton)(Button button, Action action, int x, int y);
+            extern void (*g_onScroll)(int amount);
         }
 
-        void SetCallbacks(  void (*OnMove)(int x, int y),
-                            void (*OnButton)(Mouse::Button button, Mouse::Action action, int x, int y),
+        void setCallbacks(  void (*OnMove)(int x, int y),
+                            void (*OnButton)(mouse::Button button, mouse::Action action, int x, int y),
                             void (*OnScroll)(int amount));
-
-        void Capture();
-        void Release();
     }
 }

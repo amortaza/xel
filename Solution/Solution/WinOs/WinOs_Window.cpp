@@ -2,11 +2,10 @@
 
 #include "WinOs.h"
 
-namespace WinOs {
+namespace win32 {
+    namespace _ {
 
-    namespace Internal {
-
-        void RegisterWindowClass(WNDPROC wndProc) {
+        void registerWindowClass(WNDPROC wndProc) {
             WNDCLASSEX wc;
 
             wc.cbSize        = sizeof(WNDCLASSEX);
@@ -26,7 +25,7 @@ namespace WinOs {
                 throw "Failed to register window class.";
         }
 
-        HWND CreateMainWindowEx() {
+        HWND createMainWindowEx() {
             HWND hwnd = CreateWindowEx(
                     WS_EX_CLIENTEDGE,
                     "AceWindowClass",
@@ -48,37 +47,37 @@ namespace WinOs {
         }
     }
 
-    namespace Window {
+    namespace window {
 
         HWND g_hwnd;
 
-        void CreateMainWindow(WNDPROC wndProc) {
-            Internal::RegisterWindowClass(wndProc);
+        void createMainWindow(WNDPROC wndProc) {
+            _::registerWindowClass(wndProc);
 
-            g_hwnd = Internal::CreateMainWindowEx();
+            g_hwnd = _::createMainWindowEx();
 
             ShowWindow(g_hwnd, SW_SHOW);
             UpdateWindow(g_hwnd);
         }
 
-        void SwapBuffers() {
-            SwapBuffers(GL::g_hdc);
+        void swapBuffers() {
+            SwapBuffers(gl::g_hdc);
         }
 
-        void SetPosition(int left, int top) {
+        void setPosition(int left, int top) {
             SetWindowPos(g_hwnd, 0, left, top, -1, -1, SWP_NOZORDER | SWP_NOSIZE | SWP_SHOWWINDOW);
         }
 
-        void SetSize(int width, int height) {
+        void setSize(int width, int height) {
             SetWindowPos(g_hwnd, 0, -1, -1, width, height, SWP_NOZORDER | SWP_NOMOVE | SWP_SHOWWINDOW);
         }
 
-        void SetTitle(char* title) {
+        void setTitle(char* title) {
             SetWindowText(g_hwnd, title);
         }
 
-        void Close() {
-            PostMessage(Window::g_hwnd, WM_CLOSE, 0, 0);
+        void close() {
+            PostMessage(window::g_hwnd, WM_CLOSE, 0, 0);
         }
     }
 }

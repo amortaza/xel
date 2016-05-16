@@ -1,13 +1,13 @@
 #pragma once
 
-namespace Xel {
+namespace xel {
 
-    void Init();
+    void init();
     
-	void Swap();
+	void swap();
 
-    void Loop(void(*TickCallback)());
+    void loop(void (*tickCallback) ());
 
-	void Quit();
+	void quit();
 }
 

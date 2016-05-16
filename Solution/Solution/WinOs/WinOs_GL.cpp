@@ -1,13 +1,13 @@
 #include "stdafx.h"
 
-namespace WinOs {
+namespace win32 {
 
-    namespace GL {
+    namespace gl {
 
         HGLRC g_glrc;
         HDC   g_hdc;
 
-        void Create(HWND hwnd) {
+        void createGLContext(HWND hwnd) {
 
             PIXELFORMATDESCRIPTOR pfd = {
                 sizeof(PIXELFORMATDESCRIPTOR),                              // nSize
@@ -38,7 +38,7 @@ namespace WinOs {
             wglMakeCurrent (g_hdc, g_glrc);
         }
 
-        void Delete(HWND hwnd) {            
+        void deleteGLContext(HWND hwnd) {            
 			printf("Deleting GL RC Context\n");
 
             wglMakeCurrent(NULL, NULL);
