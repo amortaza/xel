@@ -1,11 +1,11 @@
 #include "stdafx.h"
 
-#include "WinOs/WinOs.h"
+#include "xel-win32.h"
 
-#include "Xel/Xel_WndProc.h"
-#include "Xel/Xel_Mouse.h"
-#include "Xel/Xel_Keyboard.h"
-#include "Xel/Xel_Window.h"
+#include "Xel_WndProc.h"
+#include "Xel_Mouse.h"
+#include "Xel_Keyboard.h"
+#include "Xel_Window.h"
 
 #ifndef GET_XBUTTON_WPARAM
 #   define GET_XBUTTON_WPARAM(w) (HIWORD(w))

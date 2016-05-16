@@ -1,7 +1,6 @@
 #include "stdafx.h"
 
-#include "Xel/Xel_Mouse.h"
-#include "WinOs/WinOs.h"
+#include "Xel_Mouse.h"
 
 namespace xel {
     namespace mouse {

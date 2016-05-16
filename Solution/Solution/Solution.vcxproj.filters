@@ -13,11 +13,11 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Xel">
-      <UniqueIdentifier>{32cd9cf2-2108-4821-8c57-04d7984cf368}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="WinOs">
+    <Filter Include="xel-win32">
       <UniqueIdentifier>{7550b7cc-da10-4512-b9f0-c296008a8251}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xel">
+      <UniqueIdentifier>{32cd9cf2-2108-4821-8c57-04d7984cf368}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -36,32 +36,29 @@
     <ClInclude Include="Solution.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Callback.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Xel\Xel.h">
-      <Filter>Xel</Filter>
+      <Filter>xel</Filter>
     </ClInclude>
     <ClInclude Include="Xel\Xel_Common.h">
-      <Filter>Xel</Filter>
+      <Filter>xel</Filter>
     </ClInclude>
     <ClInclude Include="Xel\Xel_Keyboard.h">
-      <Filter>Xel</Filter>
+      <Filter>xel</Filter>
     </ClInclude>
     <ClInclude Include="Xel\Xel_Keyboard_Def.h">
-      <Filter>Xel</Filter>
+      <Filter>xel</Filter>
     </ClInclude>
     <ClInclude Include="Xel\Xel_Mouse.h">
-      <Filter>Xel</Filter>
+      <Filter>xel</Filter>
     </ClInclude>
     <ClInclude Include="Xel\Xel_Window.h">
-      <Filter>Xel</Filter>
+      <Filter>xel</Filter>
     </ClInclude>
     <ClInclude Include="Xel\Xel_WndProc.h">
-      <Filter>Xel</Filter>
+      <Filter>xel</Filter>
     </ClInclude>
-    <ClInclude Include="WinOs\WinOs.h">
-      <Filter>WinOs</Filter>
+    <ClInclude Include="xel\xel-win32.h">
+      <Filter>xel-win32</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -71,29 +68,26 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Callbacks.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Xel\Xel.cpp">
-      <Filter>Xel</Filter>
+      <Filter>xel</Filter>
     </ClCompile>
     <ClCompile Include="Xel\Xel_Keyboard.cpp">
-      <Filter>Xel</Filter>
+      <Filter>xel</Filter>
     </ClCompile>
     <ClCompile Include="Xel\Xel_Mouse.cpp">
-      <Filter>Xel</Filter>
+      <Filter>xel</Filter>
     </ClCompile>
     <ClCompile Include="Xel\Xel_Window.cpp">
-      <Filter>Xel</Filter>
+      <Filter>xel</Filter>
     </ClCompile>
     <ClCompile Include="Xel\Xel_WndProc.cpp">
-      <Filter>Xel</Filter>
+      <Filter>xel</Filter>
     </ClCompile>
-    <ClCompile Include="WinOs\WinOs_GL.cpp">
-      <Filter>WinOs</Filter>
+    <ClCompile Include="xel\xel-win32.cpp">
+      <Filter>xel-win32</Filter>
     </ClCompile>
-    <ClCompile Include="WinOs\WinOs_Window.cpp">
-      <Filter>WinOs</Filter>
+    <ClCompile Include="xel\xel-win32-gl.cpp">
+      <Filter>xel-win32</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

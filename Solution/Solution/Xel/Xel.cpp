@@ -1,9 +1,9 @@
 #include "stdafx.h"
 
-#include "WinOs/WinOs.h"
+#include "xel-win32.h"
 
-#include "Xel/Xel_WndProc.h"
-#include "Xel/Xel_Window.h"
+#include "Xel_WndProc.h"
+#include "Xel_Window.h"
 
 namespace xel {
 

@@ -1,6 +1,6 @@
 #include "stdafx.h"
 
-#include "Xel/Xel_Keyboard_Def.h"
+#include "Xel_Keyboard_Def.h"
 
 namespace xel {
     namespace keyboard {

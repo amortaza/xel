@@ -1,7 +1,7 @@
 #include "stdafx.h"
 
-#include "WinOs/WinOs.h"
-#include "Xel/Xel.h"
+#include "xel-win32.h"
+#include "Xel.h"
 
 namespace xel {
 
