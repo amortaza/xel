@@ -118,7 +118,7 @@ namespace Xel {
             WinOs::GL::Create(hwnd);
             glewInit();
 
-            std::cout << "OpenGL/GLEW context created" << std::endl;
+			printf("OpenGL/GLEW context created\n");
         }
 
         else if (msg == WM_CLOSE) {

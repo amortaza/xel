@@ -78,7 +78,7 @@ namespace WinOs {
         }
 
         void Close() {
-            PostMessage(Window::g_hwnd, WM_QUIT, 0, 0);
+            PostMessage(Window::g_hwnd, WM_CLOSE, 0, 0);
         }
     }
 }

@@ -24,8 +24,8 @@ namespace Xel {
             if (Internal::g_OnResize != 0)
                 WinOs::Window::SetSize(w, h);
 
-            else {
-                std::cout << "Must call Xel::Window::SetCallbacks BEFORE calling SetSize.  Its just good manners :)" << std::endl;
+            else {                
+				printf("Must call Xel::Window::SetCallbacks BEFORE calling SetSize.  Its just good manners :)\n");
                 Xel::Close();
             }
         }

@@ -10,14 +10,15 @@ void OnMouseScroll(int amount) {
 }
 
 void OnKeyDown(unsigned long long xcode) {
+	Xel::Close();
 }
 
 void OnKeyUp(unsigned long long xcode) {
 }
 
-void OnResize(int w, int h) {
-    glViewport(0, 0, w, h);
+void OnResize(int width, int height) {
+    glViewport(0, 0, width, height);
 
-    std::cout << "Set glViewport" << std::endl;
+	printf("Set glViewport in OnResize\n");
 
 }

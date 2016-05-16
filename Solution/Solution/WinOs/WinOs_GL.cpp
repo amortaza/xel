@@ -38,19 +38,19 @@ namespace WinOs {
             wglMakeCurrent (g_hdc, g_glrc);
         }
 
-        void Delete(HWND hwnd) {
-            std::cout << "Deleting GL RC Context" << std::endl;
+        void Delete(HWND hwnd) {            
+			printf("Deleting GL RC Context\n");
 
             wglMakeCurrent(NULL, NULL);
             wglDeleteContext(g_glrc);
-
-            std::cout << "Releacing DC" << std::endl;
+            
+			printf("Releacing DC\n");
             ReleaseDC(hwnd, g_hdc);
 
-            std::cout << "Destroying Window" << std::endl;
+			printf("Destroying Window\n");
             DestroyWindow(hwnd);
 
-            std::cout << "Unregistring class" << std::endl;
+			printf("Unregistring class\n");
             UnregisterClass("AceWindowClass", GetModuleHandle(0));
         }
     }

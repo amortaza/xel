@@ -11,7 +11,6 @@ namespace Xel {
             void (*g_OnUp)(unsigned long long xcode);
 
             unsigned long long VirtualCodeToXCode(unsigned long long vcode) {
-//                std::cout << "vcode " << vcode << std::endl;
 
                 if (vcode == VK_BACK)
                     return Xel_Key_Back;
@@ -316,7 +315,7 @@ namespace Xel {
         }
 
         char * XCodeToString(unsigned long long xcode) {
-//            std::cout << "xcode " << xcode << std::endl;
+
             if (xcode == Xel_Key_Back)
                 return "Xel_Key_Back";
 
